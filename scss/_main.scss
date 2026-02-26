@@ -1,0 +1,389 @@
+@use "mixins" as *;
+@use "variables" as *;
+@use "reset";
+// ---------category--------/////
+.main-page {
+  background-color: gray;
+  
+}
+
+.separator {
+  height: 1px;
+  background-color: #484848;
+  scroll-margin-top: toRem(90);
+  width: 100%;
+  @include adaptiveValue("margin-bottom", 40, 20);
+}
+
+.hero-block {
+  @include adaptiveValue("margin-bottom", 40, 20);
+}
+
+.hero-block__container {
+  display: flex;
+  @include adaptiveValue("gap", 80, 30);
+
+  @media (max-width: toEm($tablet)) {
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.hero-block__content {
+  flex: 0 1 toRem(544);
+  align-self: center;
+  
+  & > *:not(:last-child) {
+    margin-bottom: toRem(20);
+  }
+
+  @media (max-width: toEm($tablet)) {
+    flex: 1 1 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+  }
+}
+
+.hero-block__title {
+  @include adaptiveValue("font-size", 70, 40);
+  font-family: "Poppins", sans-serif;
+  text-align: left;
+  font-weight: 400;
+  line-height: 1.1; 
+  letter-spacing: toRem(-1);
+  color: black;
+
+ 
+
+
+ @media (max-width: toEm($tablet)) {
+    text-align: center;
+    max-width: toRem(500); 
+  }
+  
+
+}
+
+.hero-block__buttons {
+  display: flex;
+  gap: toRem(12);
+  align-items: center;
+
+  @media (max-width: toEm($tablet)) {
+    justify-content: center; 
+    width: 100%;
+  }
+
+  @media (max-width: toEm($mobileSmall)) {
+    flex-direction: column; 
+  }
+}
+
+.hero-block__link {
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+
+  &--contact {
+    border-radius: toRem(100);
+    padding: toRem(20) toRem(40);
+    justify-content: center;
+    background-color: #d3e97a;
+    color: #0a0a0a;
+    font-weight: 700;
+
+    @media (max-width: toEm($mobileSmall)) {
+      width: 100%;
+    }
+  }
+
+  @media (any-hover: hover) and (any-pointer: fine) {
+    &:hover {
+      &.hero-block__link--contact {
+        background-color: darken(#d3e97a, 10%); 
+        transform: translateY(toRem(-3)); 
+      }
+      
+      &:not(.hero-block__link--contact) {
+        opacity: 0.7;
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+.hero-block__image {
+  flex: 0 0 toRem(600);
+  height: toRem(700);
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media (max-width: toEm($tablet)) {
+    flex: 0 1 auto;
+    width: 100%;
+    max-width: toRem(500);
+    height: toRem(500);
+  }
+}
+// -----About-------////
+.home-about {
+  background-color: gray;
+  @include adaptiveValue("margin-bottom", 40, 20);
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: toRem(40);
+
+   
+    @media (max-width: toEm($tablet)) {
+      flex-direction: column;
+      align-items: center; 
+      text-align: center;
+    }
+  }
+
+  &__title {
+    flex: 0 1 30%;
+    font-size: toRem(76);
+    font-weight: 400;
+    line-height: 1;
+    text-transform: uppercase;
+    color: black;
+
+    @include adaptiveValue("font-size", 76, 40);
+
+    @media (max-width: toEm($tablet)) {
+      flex: 1 1 auto;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  &__content {
+    flex: 0 1 60%;
+    & > *:not(:last-child) {
+      margin-bottom: toRem(24);
+    }
+
+
+    @media (max-width: toEm($tablet)) {
+      flex: 1 1 auto;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__subtitle {
+    font-size: toRem(32);
+    font-weight: 500;
+    line-height: 1.4;
+    color: black; 
+
+    @include adaptiveValue("font-size", 32, 22);
+  }
+
+  &__text {
+    font-size: toRem(18);
+    line-height: 1.6;
+    color: black;
+
+    p:not(:last-child) {
+      margin-bottom: toRem(16);
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    font-size: toRem(16);
+    font-weight: 600;
+    color: #d3e97a;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-bottom: toRem(2) solid #d3e97a;
+    padding-bottom: toRem(4);
+    transition: all 0.3s ease;
+
+    @media (any-hover: hover)and (any-pointer: fine) {
+      &:hover {
+        opacity: 0.7; 
+        transform: translateY(toRem(-2));
+      }
+    }
+  }
+}
+// --------portfolio--------//////
+.portfolio-main {
+  @include adaptiveValue("padding-top", 80, 40);
+
+  &__heading {
+    @include adaptiveValue("margin-bottom", 80, 30);
+    @media (max-width: toEm($tablet)) {
+      text-align: center;
+    }
+  }
+
+  &__main-title {
+    @include adaptiveValue("font-size", 76, 40);
+    text-align: left;
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: toRem(8);
+    
+    @media (max-width: toEm($tablet)) {
+      text-align: center;
+    }
+  }
+
+  &__main-text {
+    @include adaptiveValue("font-size", 18, 16);
+    line-height: 1.5;
+    @media (max-width: toEm($tablet)) {
+      text-align: center;
+    }
+  }
+
+  &__item {
+    display: flex;
+    gap: toRem(30);
+    @include adaptiveValue("margin-bottom", 100, 40);
+
+    @media (max-width: toEm($tablet)) {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  &__image {
+    // flex: 1 1 50% 
+    flex: 1 1 50%;
+    min-width: 0;
+    background-color: rgba(147, 146, 146, 0.6);
+    border-radius: toRem(5);
+    
+    @include adaptiveValue("padding", 50, 20); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 100%; 
+      height: auto;
+      aspect-ratio: 486 / 347;
+      object-fit: contain; // Щоб фото не обрізалося
+      border-radius: toRem(5);
+    }
+
+    @media (max-width: toEm($tablet)) {
+      flex: 1 1 auto;
+      width: 100%;
+    }
+  }
+
+  &__content {
+    flex: 1 1 50%;
+    align-self: center;
+
+    @media (max-width: toEm($tablet)) {
+      flex: 1 1 auto;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__title {
+    @include adaptiveValue("font-size", 32, 24);
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: toRem(16);
+  }
+
+  &__description {
+    @include adaptiveValue("margin-bottom", 32, 20);
+    @include adaptiveValue("font-size", 18, 16);
+    font-weight: 400;
+    line-height: 1.5;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+    gap: toRem(24);
+    @media (max-width: toEm($tablet)) {
+      justify-content: center;
+    }
+  }
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    gap: toRem(8);
+    text-decoration: none;
+    color: #d3e97a;
+    padding-bottom: toRem(2);
+    border-bottom: toRem(1) solid #d3e97a;
+    transition: all 0.3s ease;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      width: toRem(16);
+      height: toRem(16);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &:hover::after {
+      transform: scale(1.2);
+    }
+
+    &--live::after {
+      background-image: url("../img/img-main/arrow.svg");
+    }
+
+    &--github::after {
+      background-image: url("../img/img-main/bxl-github.svg.svg");
+    }
+  }
+}
+
+// Таблиця всередині контенту
+.info-portfolio {
+  width: 100%;
+  @include adaptiveValue("margin-bottom", 32, 20);
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    padding-top: toRem(16);
+    padding-bottom: toRem(16);
+    border-bottom: toRem(1) solid $black; 
+    @include adaptiveValue("font-size", 16, 14);
+    font-weight: 600;
+  }
+
+  &__value {
+    font-weight: 400;
+  }
+}

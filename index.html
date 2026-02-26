@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:regular,italic,500,600,700,800,900" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Volkhov:regular,700" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,200,300,regular,500,600,700,800,900" rel="stylesheet" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<title>Main page</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header home-header">
+			<div class="home-header__container">
+				<div class="home-header__logo home-logo">
+					<a href="#home" class="home-logo__name">M F</a>
+				</div>
+				<nav class="home-header__navigation home-navigation">
+					<ul class="home-navigation__items">
+						<li class="home-navigation__item">
+							<a href="#" class="home-navigation__link">Home</a>
+						</li>
+						<li class="home-navigation__item">
+							<a href="#about" class="home-navigation__link">About</a>
+						</li>
+						<li class="home-navigation__item">
+							<a href="#portfolio" class="home-navigation__link">Portfolio</a>
+						</li>
+						<li class="home-navigation__item">
+							<a href="#contact" class="home-navigation__link">Contact</a>
+						</li>
+					</ul>
+				</nav>
+				<button class="icon-menu" type="button" id="burger">
+					<span></span>
+				</button>
+					<div class="mobile-menu" id="mobileMenu">
+						<ul class="mobile-menu__list">
+							<li class="mobile-menu__item">
+									<a href="#about">About</a>
+							</li>
+							<li class="mobile-menu__item">
+								<a href="#portfolio">Portfolio</a>
+							</li>
+							<li class="mobile-menu__item">
+					<a href="#contact">Contact</a>
+							</li>
+							
+		
+						</ul>
+					</div>
+			</div>
+		</header>
+		<main class="page main-page">
+			<div class="main-page__hero hero-block">
+				<div class="hero-block__container">
+					<div class="hero-block__content">
+						<h2 class="hero-block__title">Hi, i am <br><span>Mariia Finiak.</span></h2>
+						<p class="hero-block__text">"A front-end developer passionate about building accessible and user-friendly websites."</p>
+						<div class="hero-block__buttons">
+							<a href="#contact" class="hero-block__link hero-block__link--contact">Contact me</a>
+							<a href="https://www.linkedin.com/in/mariia-finiak" target="_blank" rel="noopener noreferrer" class="hero-block__link"><img src="img/img-main/icon-link.svg" alt="linkedin"></a>
+							<a href="https://github.com/MariiaFiniak" target="_blank" rel="noopener noreferrer" class="hero-block__link"><img src="img/img-main/icon-git.svg" alt="github"></a>
+						</div>
+					</div>
+					<div class="hero-block__image">
+						<img src="img/img-main/2jpg.jpeg" alt="Mariia Finiak">
+					</div>
+				</div>
+			</div>
+			<div id="about" class="separator"></div>
+			<div class="page__about home-about">
+				<div class="home-about__container">
+					<h2 class="home-about__title">ABOUT ME</h2>
+					<div class="home-about__content">
+						<h3 class="home-about__subtitle"> I am a front-end developer based in Prague, Czech Republic. </h3>
+						<div class="home-about__text">
+							<p> I am a markup developer with in-depth knowledge of HTML, CSS, and JavaScript. In my work, I actively use modern preprocessors such as SCSS, which allows me to ensure high productivity and efficiency in the development process. </p>
+							<p> I confidently handle adaptive and cross-browser layout, use VS Code for coding and Figma for working with design layouts. I actively utilize the BEM methodology and Git for version control. </p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="portfolio" class="separator"></div>
+			<div class="main-page__portfolio portfolio-main">
+				<div class="portfolio-main__container">
+					<div class="portfolio-main__heading">
+						<h2 class="portfolio-main__main-title">Portfolio</h2>
+						<p class="portfolio-main__main-text">Here are some of my recent projects.</p>
+					</div>
+					<div class="portfolio-main__items">
+						<div class="portfolio-main__item">
+							<div class="portfolio-main__image">
+								<img src="img/img-main/portfolio_1.avif" alt="#">
+							</div>
+							<div class="portfolio-main__content">
+								<h2 class="portfolio-main__title">Future Academy</h2>
+								<p class="portfolio-main__description"> "A modern landing page for an IT academy, built with a focus on clean semantic HTML and performance optimization. It features a fully responsive design that ensures a seamless user experience across all devices." </p>
+								<div class="portfolio-main__info info-portfolio">
+									<h2 class="info-portfolio__title">Progect info</h2>
+									<div class="info-portfolio__row">
+										<span class="info-portfolio__label">Year:</span>
+										<span class="info-portfolio__value">2025</span>
+									</div>
+									<div class="info-portfolio__row">
+										<span class="info-portfolio__label">Role:</span>
+										<span class="info-portfolio__value">Front-end Developer</span>
+									</div>
+								</div>
+								<div class="portfolio-main__links">
+									<a href="https://mariiafiniak.github.io/FINAL-PROJECT/" target="_blank" class="portfolio-main__link portfolio-main__link--live">Live Demo</a>
+									<a href="https://github.com/MariiaFiniak/FINAL-PROJECT/blob/main/index.html" target="_blank" class="portfolio-main__link portfolio-main__link--github">See on GitHub</a>
+								</div>
+							</div>
+						</div>
+						<div class="portfolio-main__item">
+							<div class="portfolio-main__image">
+								<img src="img/img-main/portfolio_2.avif" alt="#">
+							</div>
+							<div class="portfolio-main__content">
+								<h2 class="portfolio-main__title">Travel Agency</h2>
+								<p class="portfolio-main__description"> "A vibrant and engaging landing page for a travel agency, showcasing curated tour packages. Developed with high attention to detail, utilizing advanced CSS techniques to create a visually appealing and intuitive interface for travelers." </p>
+								<div class="portfolio-main__info info-portfolio">
+									<h2 class="info-portfolio__title">Progect info</h2>
+									<div class="info-portfolio__row">
+										<span class="info-portfolio__label">Year:</span>
+										<span class="info-portfolio__value">2026</span>
+									</div>
+									<div class="info-portfolio__row">
+										<span class="info-portfolio__label">Role:</span>
+										<span class="info-portfolio__value">Front-end Developer</span>
+									</div>
+								</div>
+								<div class="portfolio-main__links">
+									<a href="https://mariiafiniak.github.io/Portfolio/" target="_blank" rel="noopener noreferrer" class="portfolio-main__link portfolio-main__link--live">Live Demo</a>
+									<a href="https://github.com/MariiaFiniak/Portfolio/blob/main/index.html" target="_blank" class="portfolio-main__link portfolio-main__link--github"> See on GitHub </a>
+								</div>
+							</div>
+						</div>
+						<div class="portfolio-main__item">
+							<div class="portfolio-main__image">
+								<img src="img/img-main/portfolio_3.avif" alt="#">
+							</div>
+							<div class="portfolio-main__content">
+								<h2 class="portfolio-main__title">Rent cars</h2>
+								<p class="portfolio-main__description">"A dynamic car rental platform featuring a structured catalog of vehicles. Built using BEM methodology for scalable styling and SCSS for flexible layout management, focusing on accessibility and fast-loading interactive elements." </p>
+								<div class="portfolio-main__info info-portfolio">
+									<h2 class="info-portfolio__title">Progect info</h2>
+									<div class="info-portfolio__row">
+										<span class="info-portfolio__label">Year:</span>
+										<span class="info-portfolio__value">2026</span>
+									</div>
+									<div class="info-portfolio__row">
+										<span class="info-portfolio__label">Role:</span>
+										<span class="info-portfolio__value">Front-end Developer</span>
+									</div>
+								</div>
+								<div class="portfolio-main__links">
+									<a href="https://mariiafiniak.github.io/Portfolio/rentcar.html" target="_blank" rel="noopener noreferrer" class="portfolio-main__link portfolio-main__link--live"> Live Demo </a>
+									<a href="https://github.com/MariiaFiniak/Portfolio/blob/main/rentcar.html" target="_blank" rel="noopener noreferrer" class="portfolio-main__link portfolio-main__link--github"> See on GitHub </a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="separator"></div>
+		</main>
+		<footer class="main-footer">
+			<div id="contact" class="main-footer__container">
+				<div class="main-footer__inner">
+					<div class="main-footer__content">
+						<h2 class="main-footer__title">LET’S CONNECT</h2>
+						<div class="main-footer__body">
+							<p class="main-footer__text"> Say hello at <a href="mailto:finyakmasha@gmail.com" class="main-footer__link">finyakmasha@gmail.com</a>
+							</p>
+							<p class="main-footer__text"> For more info, here’s my <a href="#" class="main-footer__link main-footer__link--underline">resume</a>. </p>
+						</div>
+						<div class="main-footer__social social-main-footer">
+							<a href="https://www.linkedin.com/in/mariia-finiak" target="_blank" class="social-main-footer__link"><img src="img/img-main/link-green.svg" alt="linkedin"></a>
+							<a href="https://github.com/MariiaFiniak" target="_blank" class="social-main-footer__link"><img src="img/img-main/github-green.svg" alt="github"></a>
+							<a href="https://www.instagram.com/mashaivanova8844?igsh=aHJjZ3Q5c2tucTk%3D&utm_source=qr"target="_blank" class="social-main-footer__link"><img src="img/img-main/insta.svg" alt="instagram"></a>
+						</div>
+						<p class="main-footer__copy">© 2026 Mariia Finiak</p>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="js/script.js"></script>
+</body>
+
+</html>

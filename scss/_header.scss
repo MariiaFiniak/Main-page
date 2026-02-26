@@ -1,0 +1,100 @@
+@use "mixins" as *;
+@use "variables" as *;
+@use "reset";
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: toRem(100);
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - toRem(60));
+  z-index: 900;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: toRem(44);
+  font-weight: 600;
+  color: $cd3;
+   margin-bottom: toRem(20);
+
+  &.active {
+    display: flex;
+	 background-color:gainsboro;
+	 
+	
+
+  }
+  .mobile-menu__list {
+       display: flex;
+       flex-direction: column;
+       align-items: center;
+       gap: toRem(20);
+    }
+
+}
+
+.home-header { 
+	 position: fixed;
+  z-index: 990;
+  top: toRem(0);
+  left: toRem(0);
+  width: 100%;
+  transition: 0.3s ease;
+	border-bottom: toRem(1) solid #484848;
+  background-color: gray;
+  font-family: "Inter", sans-serif;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    padding: toRem(30);
+    justify-content: space-between; 
+  }
+}
+
+.home-logo {
+  &__name {
+	margin-right: toRem(10);
+    font-size: toRem(30);
+    font-weight: 500;
+    line-height: 1.5;
+    display: inline-flex; 
+    justify-content: center;
+    align-items: center;
+    border: toRem(1) solid black;
+    padding: toRem(5) toRem(10);
+   
+    
+  }
+}
+
+.home-navigation {
+	  @media (max-width: toEm($mobile)) {
+    display: none;
+  }
+  &__items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  @include adaptiveValue(" gap", 40, 15);
+    
+  }
+
+  &__item {
+    font-size: toRem(20);
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: toRem(-1);
+  }
+
+  &__link {
+    transition: color 0.3s ease;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: #d3e97a; 
+      }
+    }
+  }
+}
