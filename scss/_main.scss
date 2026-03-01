@@ -4,7 +4,7 @@
 // ---------category--------/////
 .main-page {
   background-color: gray;
-  
+  padding-top: toRem(100);
 }
 
 .separator {
@@ -122,21 +122,25 @@
 }
 
 .hero-block__image {
-  flex: 0 0 toRem(600);
-  height: toRem(700);
-  overflow: hidden;
+  flex: 0 1 toRem(600);
+
+
+
 
   img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    max-width: 100%;
+
+ 
   }
 
   @media (max-width: toEm($tablet)) {
     flex: 0 1 auto;
     width: 100%;
     max-width: toRem(500);
-    height: toRem(500);
+img {
+      height: auto; 
+    }
+
   }
 }
 // -----About-------////
